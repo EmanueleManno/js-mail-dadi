@@ -5,9 +5,10 @@ console.log('JS OK');
 const diceButton = document.getElementById('dice-button');
 const userNumber = document.getElementById('user-number');
 const cpuNumber = document.getElementById('cpu-number');
+const esitElement = document.getElementById('esit');
 
 //AL CLICK DEL BOTTONE:
-diceButton.addEventListener('click' , function () {
+diceButton.addEventListener('click', function () {
 
 //GENERO UN NUMERO CASUALE (UTENTE):
 const userRandom =  Math.random();
@@ -31,18 +32,20 @@ console.log('Numero Estratto CPU : ' + cpuResult);
 //CONFRONTO DEI NUMERI! SE I NUMERI SONO UGUALI:
 if (userResult == cpuResult){
     console.log('Pareggio!');
+    esitElement.innerText = 'Pareggio!';
 }
 //SE IL NUMERO DELL'UTENTE E' MAGGIORE DI QUELLO DELLA CPU:
 else if (userResult > cpuResult){
     console.log('Vittoria per il giocatore!');
+    esitElement.innerText = 'Vittoria per il giocatore!';
 }
 //SE IL NUMERO DELL'UTENTE E' MINORE DI QUELLO DELLA CPU:
 else if (userResult < cpuResult){
     console.log('Vittoria per la CPU!');
+    esitElement.innerText = 'Vittoria per la CPU!';
 }
 
 //INSERISCO I RISULTATI NELLA PAGINA:
 userNumber.innerText = ('Numero Estratto utente :') + userResult;
 cpuNumber.innerText = ('Numero Estratto CPU :') + cpuResult;
-
-})
+});

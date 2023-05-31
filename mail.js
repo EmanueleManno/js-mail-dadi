@@ -11,3 +11,4 @@ console.table(mailList);
 //CHIEDO LA MAIL ALL'UTENTE:
 const mailInput = prompt('Dimmi una mail valevole per poter accedere!').trim();
 console.log(mailInput);
+
