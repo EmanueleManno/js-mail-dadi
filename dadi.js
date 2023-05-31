@@ -1,6 +1,14 @@
 //VEDO SE FUNZIONA
 console.log('JS OK');
 
+//RECUPERO GLI ELEMENTI DAL DOM:
+const diceButton = document.getElementById('dice-button');
+const userNumber = document.getElementById('user-number');
+const cpuNumber = document.getElementById('cpu-number');
+
+//AL CLICK DEL BOTTONE:
+diceButton.addEventListener('click' , function () {
+
 //GENERO UN NUMERO CASUALE (UTENTE):
 const userRandom =  Math.random();
 console.log('Random User number ' + userRandom);
@@ -32,3 +40,9 @@ else if (userResult > cpuResult){
 else if (userResult < cpuResult){
     console.log('Vittoria per la CPU!');
 }
+
+//INSERISCO I RISULTATI NELLA PAGINA:
+userNumber.innerText = ('Numero Estratto utente :') + userResult;
+cpuNumber.innerText = ('Numero Estratto CPU :') + cpuResult;
+
+})
