@@ -1,2 +1,34 @@
 //VEDO SE FUNZIONA
-console.log('JS OK')
+console.log('JS OK');
+
+//GENERO UN NUMERO CASUALE (UTENTE):
+const userRandom =  Math.random();
+console.log('Random User number ' + userRandom);
+
+//GENERO UN SECONDO NUMERO CASUALE (CPU):
+const cpuRandom =  Math.random();
+console.log('Random CPU number ' + cpuRandom);
+
+//DICHIARO CHE VOGLIO CHE IL NUMERO MASSIMO SIA 6:
+const max = 6;
+
+//GENERO UN NUMERO CASUALE PER L'UTENTE:
+let userResult = Math.floor(userRandom * max) + 1;
+console.log('Numero Estratto Utente : ' + userResult);
+
+//GENERO UN NUMERO CASUALE PER LA CPU:
+let cpuResult = Math.floor(cpuRandom * max) + 1;
+console.log('Numero Estratto CPU : ' + cpuResult);
+
+//CONFRONTO DEI NUMERI! SE I NUMERI SONO UGUALI:
+if (userResult == cpuResult){
+    console.log('Pareggio!');
+}
+//SE IL NUMERO DELL'UTENTE E' MAGGIORE DI QUELLO DELLA CPU:
+else if (userResult > cpuResult){
+    console.log('Vittoria per il giocatore!');
+}
+//SE IL NUMERO DELL'UTENTE E' MINORE DI QUELLO DELLA CPU:
+else if (userResult < cpuResult){
+    console.log('Vittoria per la CPU!');
+}
