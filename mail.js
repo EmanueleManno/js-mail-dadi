@@ -2,8 +2,7 @@
 console.log('JS OK');
 
 //RECUPERO L'ELEMENTO DAL DOM:
-const mailAnswerOk = document.getElementById('mail-answer-ok');
-const mailAnswerNo = document.getElementById('mail-answer-no');
+const mailAnswer = document.getElementById('mail-answer');
 
 //CREO LA LISTA DI MAIL:
 const mailList = ['emanuele.manno@gmail.com', 'marco.lanci@gmail.com', 'marco.baroncini@gmail.com', 'marius.minia@gmail.com'];
@@ -19,9 +18,9 @@ console.log(mailList[i]);
 
     if (mailInput == mailList[i]) {
     console.log('Benvenuto ' + mailInput);
-    mailAnswerOk.innerText = ('Benvenuto ' + mailInput);  
+    mailAnswer.innerText = ('Benvenuto ' + mailInput);  
 }
-    else (mailInput != mailList[i]) 
+    else (mailInput != mailList[i])
     console.log('NON PUOI ACCEDERE FURFANTE');
-    mailAnswerNo.innerText = ('NON PUOI ACCEDERE FURFANTE');
+    mailAnswer.innerText = ('NON PUOI ACCEDERE FURFANTE');
 }
